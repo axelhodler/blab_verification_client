@@ -12,6 +12,10 @@ Router.map(function() {
     this.route('edit');
     this.route('show', {
       path: ':report_id'
+    }, function() {
+      this.route('verifications', {resetNamespace: true}, function() {
+        this.route('new');
+      });
     });
   });
   this.route('members', function() {
