@@ -14,7 +14,7 @@ Router.map(function() {
       path: ':report_id'
     });
   });
-  this.route('members');
+  this.route('members', function() {});
 });
 
 export default Router;
