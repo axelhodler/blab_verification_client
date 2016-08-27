@@ -1,1 +1,6 @@
-{{outlet}}
+<h1>New report</h1>
+<form {{ action "save" on="submit" }}>
+  {{input value=model.id placeholder="Documenthash"}}<br>
+  {{input value=model.submitterId placeholder="SubmitterId"}}<br>
+  <input type="submit" value="Save">
+</form>
