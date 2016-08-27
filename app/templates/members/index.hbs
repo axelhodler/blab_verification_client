@@ -1,1 +1,18 @@
-{{outlet}}
+<table>
+  <thead>
+  <tr>
+    <th>Id</th>
+  </tr>
+  </thead>
+  <tbody>
+
+  {{#each model as |member|}}
+
+    <tr>
+      <td>{{ member.id }}</td>
+    </tr>
+
+  {{/each}}
+
+  </tbody>
+</table>
