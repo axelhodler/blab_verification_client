@@ -1,0 +1,23 @@
+<h1>Reports</h1>
+<table>
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Submitter</th>
+      <th>isValid</th>
+    </tr>
+  </thead>
+  <tbody>
+
+  {{#each model as |report|}}
+
+    <tr>
+      <td>{{ report.id }}</td>
+      <td>{{ report.submitterId }}</td>
+      <td>{{ report.valid }}</td>
+    </tr>
+
+  {{/each}}
+
+  </tbody>
+</table>
