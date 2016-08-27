@@ -13,7 +13,7 @@
   {{#each model as |report|}}
 
     <tr>
-      <td>{{ report.id }}</td>
+      <td>{{link-to report.id 'reports.show' report }}</td>
       <td>{{ report.submitterId }}</td>
       <td>{{ report.valid }}</td>
     </tr>
