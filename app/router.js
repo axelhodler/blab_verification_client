@@ -10,6 +10,9 @@ Router.map(function() {
   this.route('reports', function() {
     this.route('new');
     this.route('edit');
+    this.route('show', {
+      path: ':report_id'
+    });
   });
 });
 
