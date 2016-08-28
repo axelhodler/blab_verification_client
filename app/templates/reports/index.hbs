@@ -16,11 +16,8 @@
       <td>{{link-to report.id 'reports.show' report }}</td>
       <td>{{ report.submitterId }}</td>
       <td>
-      {{#if report.valid }}
-        {{fa-icon "check"}}
-      {{else}}
-        {{fa-icon "remove"}}
-      {{/if}}
+        {{verifications/is-valid
+          condition=report.valid}}
       </td>
     </tr>
 
