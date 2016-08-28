@@ -4,7 +4,7 @@ export default Ember.Controller.extend({
   actions: {
     save() {
       this.get('model').save().then((model) => {
-        this.back(model.get('report'));
+        this.transitionToRoute('reports.show', model.get('report'));
       });
     }
   }
