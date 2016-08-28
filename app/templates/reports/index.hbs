@@ -5,7 +5,7 @@
     <tr>
       <th>Id</th>
       <th>Submitter</th>
-      <th>isValid</th>
+      <th>is valid?</th>
     </tr>
   </thead>
   <tbody class="p1 p3">
@@ -15,7 +15,13 @@
     <tr>
       <td>{{link-to report.id 'reports.show' report }}</td>
       <td>{{ report.submitterId }}</td>
-      <td>{{ report.valid }}</td>
+      <td>
+      {{#if report.valid }}
+        {{fa-icon "check"}}
+      {{else}}
+        {{fa-icon "remove"}}
+      {{/if}}
+      </td>
     </tr>
 
   {{/each}}
