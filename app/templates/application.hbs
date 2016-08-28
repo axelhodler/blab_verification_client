@@ -1,4 +1,11 @@
 <h2>Blab Report Verification</h2>
-{{link-to 'Reports' 'reports.index' }}
-{{link-to 'Members' 'members.index' }}
-{{outlet}}
+<header class="h2 border">
+  <nav class="flex item-center">
+    {{link-to 'Reports' 'reports.index' class="p2"}}
+    {{link-to 'Members' 'members.index' class="p2"}}
+  </nav>
+</header>
+
+<main class="clearfix">
+  {{outlet}}
+</main>
