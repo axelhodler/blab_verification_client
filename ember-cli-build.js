@@ -7,6 +7,7 @@ module.exports = function(defaults) {
     // Add options here
   });
 
+  app.import('vendor/basscss-8.0.2.min.css');
   // Use `app.import` to add additional libraries to the generated
   // output files.
   //
