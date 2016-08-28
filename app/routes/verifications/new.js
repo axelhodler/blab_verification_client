@@ -2,9 +2,17 @@ import Ember from 'ember';
 
 export default Ember.Route.extend({
   model() {
+    var report = this.modelFor('reports/show');
+    var pickableMembers = this.get('store')
+      .findAll('member').then((members) => {
+        return members.filter(item => {
+          return item.id !== report.get('submitterId');
+        });
+      });
+
     return this.store.createRecord('verification', {
-      report: this.modelFor('reports/show'),
-      members: this.get('store').findAll('member')
+      report: report,
+      members: pickableMembers
     });
   }
 });
