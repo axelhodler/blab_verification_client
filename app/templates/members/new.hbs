@@ -1,5 +1,8 @@
 <h1>New member</h1>
 <form {{ action "save" on="submit" }}>
-  {{ input value=model.id placeholder="Id" }}
+  {{ input
+    value=model.id
+    placeholder="Id"
+    required=true }}
   <input type="submit" value="save">
 </form>
