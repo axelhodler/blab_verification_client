@@ -21,6 +21,7 @@ Router.map(function() {
   this.route('members', function() {
     this.route('new');
   });
+  this.route('login');
 });
 
 export default Router;
