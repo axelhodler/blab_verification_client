@@ -1,12 +1,24 @@
 <h1>New report</h1>
 <form {{ action "save" on="submit" }}>
+  {{input value=model.input
+          placeholder="Input"
+          required=true
+          class="input fit"}}
+
+  {{input value=model.output
+          placeholder="Output"
+          required=true
+          class="input fit"}}
+
   {{input value=model.submitterId
           placeholder="SubmitterId"
           required=true
           class="input fit"}}<br>
+
   {{bootstrap-datepicker
     placeholder="Choose date"
     todayHighlight=true
     value=model.createdOn}}
+
   <input type="submit" value="Save">
 </form>
