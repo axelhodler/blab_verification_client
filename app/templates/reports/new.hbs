@@ -1,26 +1,31 @@
 <h1>New report</h1>
-<form {{ action "save" on="submit" }}>
-  {{input value=model.input
-          placeholder="Input"
-          required=true
-          type="number"
-          min="1"
-          class="input fit"}}
+<div class="clearfix">
+  <form class="flex flex-column col col-3" {{ action "save" on="submit" }}>
+    {{input value=model.input
+            placeholder="Input"
+            required=true
+            type="number"
+            min="1"
+            class="m1 input fit"}}
 
-  {{input value=model.output
-          placeholder="Output"
-          required=true
-          class="input fit"}}
+    {{input value=model.output
+            placeholder="Output"
+            required=true
+            class="m1 input fit"}}
 
-  {{input value=model.submitterId
-          placeholder="SubmitterId"
-          required=true
-          class="input fit"}}<br>
+    {{input value=model.submitterId
+            placeholder="SubmitterId"
+            required=true
+            class="m1 input fit"}}
 
-  {{bootstrap-datepicker
-    placeholder="Choose date"
-    todayHighlight=true
-    value=model.createdOn}}
+    {{bootstrap-datepicker
+      placeholder="Choose date"
+      todayHighlight=true
+      class="m1"
+      value=model.createdOn}}
 
-  <input type="submit" value="Save">
-</form>
+    <input type="submit"
+           value="Save"
+           class="m1">
+  </form>
+</div>
