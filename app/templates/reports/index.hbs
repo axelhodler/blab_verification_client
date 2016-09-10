@@ -1,14 +1,14 @@
 <h1>Reports</h1>
-{{link-to 'Create report' 'reports.new' }}
-<table class="mt3 fit">
-  <thead class="p1 p2">
+{{link-to 'Create report' 'reports.new' tagName='button' class="btn btn-primary" }}
+<table class="table">
+  <thead>
     <tr>
       <th>Id</th>
       <th>Submitter</th>
       <th>is valid?</th>
     </tr>
   </thead>
-  <tbody class="p1 p3">
+  <tbody>
 
   {{#each model as |report|}}
 
