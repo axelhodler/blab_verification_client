@@ -13,5 +13,6 @@ export default Ember.Controller.extend({
         this.transitionToRoute('reports.index');
       });
     }
-  }
+  },
+  now: new Date()
 });
