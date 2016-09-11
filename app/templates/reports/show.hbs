@@ -1,12 +1,14 @@
 <h1>Show Report</h1>
 <ul>
-  <li>Id: {{ model.id }}</li>
   <li>SubmitterId: {{ model.submitterId }}</li>
+  <li>Input (hours): {{ model.input }}</li>
+  <li>Output: {{ model.output }}</li>
+  <li>Date {{ model.createdOn }}</li>
   <li>isValid: {{ model.valid }}</li>
 </ul>
 
 {{#if model.verifications}}
-  <h3>verifiers</h3>
+  <h3>Verified by</h3>
   <ul>
     {{#each model.verifications as |verifier|}}
       <li>{{ verifier.id }}</li>
