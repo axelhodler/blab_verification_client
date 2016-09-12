@@ -24,8 +24,8 @@ module.exports = function(environment) {
   };
 
   ENV['ember-simple-auth-token'] = {
-    serverTokenEndpoint: '/auth/jwt/',
-    serverTokenRefreshEndpoint: '/auth/jwt/',
+    serverTokenEndpoint: '/auth',
+    serverTokenRefreshEndpoint: '/auth',
     timeFactor: 1000,
     refreshLeeway: 300 // Refresh the token 5 minutes (300s) before it expires
   };
