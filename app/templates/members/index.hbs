@@ -1,19 +1,22 @@
 <h1>Members</h1>
-{{ link-to 'New member' 'members.new' tagName='button' class='btn btn-primary'}}
 <table class="table">
   <thead>
   <tr>
     <th>Id</th>
+    <th>Name</th>
+    <th>Mail</th>
+    <th>Address</th>
   </tr>
   </thead>
   <tbody>
 
   {{#each model as |member|}}
-
     <tr>
       <td>{{ member.id }}</td>
+      <td>{{ member.fullName}}</td>
+      <td>{{ member.mail }}</td>
+      <td>{{ member.etherAddress }}</td>
     </tr>
-
   {{/each}}
 
   </tbody>
