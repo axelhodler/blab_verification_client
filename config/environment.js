@@ -27,7 +27,10 @@ module.exports = function(environment) {
     serverTokenEndpoint: '/auth',
     serverTokenRefreshEndpoint: '/auth',
     timeFactor: 1000,
-    refreshLeeway: 300 // Refresh the token 5 minutes (300s) before it expires
+    refreshLeeway: 300, // Refresh the token 5 minutes (300s) before it expires,
+    headers: {
+      'Content-Type': 'application/vnd.api+json'
+    }
   };
 
   if (environment === 'development') {
