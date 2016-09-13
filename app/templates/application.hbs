@@ -20,11 +20,17 @@
       </ul>
 
       <ul class="nav navbar-nav navbar-right">
-        <li>
-          {{#link-to 'login'}}
-            {{fa-icon "key"}} Login
-          {{/link-to}}
-        </li>
+        {{#if session.isAuthenticated}}
+          <li>
+            <a {{ action 'invalidateSession' }}> {{fa-icon "key" }} Logout</a>
+          </li>
+        {{else}}
+          <li>
+            {{#link-to 'login'}}
+              {{fa-icon "key"}} Login
+            {{/link-to}}
+          </li>
+        {{/if}}
       </ul>
     </div>
 
