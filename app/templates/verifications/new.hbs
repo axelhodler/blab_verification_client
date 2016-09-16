@@ -1,9 +1,4 @@
 <h2>New verification</h2>
 <form {{ action "save" on="submit" }}>
-  {{#power-select selected=model.member
-                  options=model.members
-                  onchange=(action (mut model.member)) as |member|}}
-    {{ member.id }}
-  {{/power-select}}
   <button type="submit" class="btn btn-primary">Save</button>
 </form>
