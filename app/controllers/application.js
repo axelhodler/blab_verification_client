@@ -14,7 +14,7 @@ export default Ember.Controller.extend({
       tokenData = authenticator.getTokenData(session.token);
     }
 
-    return JSON.stringify(tokenData, null, '\t');
+    return tokenData;
   }),
 
   actions: {

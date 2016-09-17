@@ -16,6 +16,8 @@
   </ul>
 {{/if}}
 
-{{ link-to "Add verification" "verifications.new" tagName='button' class='btn btn-primary' }}
+{{#if canVerify}}
+  {{ link-to "Add verification" "verifications.new" tagName='button' class='btn btn-primary' }}
+{{/if}}
 
 {{ outlet }}
