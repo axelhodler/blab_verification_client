@@ -1,5 +1,4 @@
-{{#if session.isAuthenticated}}
-  {{ tokenData }}
+{{#if session.isAuthenticated }}
 {{else}}
   <form {{action 'authenticate' on='submit'}}>
     <div class="form-group">
