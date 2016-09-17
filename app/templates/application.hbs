@@ -5,19 +5,21 @@
     </div>
 
     <div class="collapse navbar-collapse">
-      <ul class="nav navbar-nav">
-        <li>
-          {{#link-to 'reports.index'}}
-            {{fa-icon "sticky-note-o"}} Reports
-          {{/link-to}}
-        </li>
+      {{#if session.isAuthenticated }}
+        <ul class="nav navbar-nav">
+          <li>
+            {{#link-to 'reports.index'}}
+              {{fa-icon "sticky-note-o"}} Reports
+            {{/link-to}}
+          </li>
 
-        <li>
-          {{#link-to 'members.index'}}
-            {{fa-icon "users"}} Members
-          {{/link-to}}
-        </li>
-      </ul>
+          <li>
+            {{#link-to 'members.index'}}
+              {{fa-icon "users"}} Members
+            {{/link-to}}
+          </li>
+        </ul>
+      {{/if}}
 
       <ul class="nav navbar-nav navbar-right">
         {{#if session.isAuthenticated}}
