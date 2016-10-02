@@ -16,7 +16,9 @@ module.exports = function(environment) {
     APP: {
       // Here you can pass flags/options to your application instance
       // when it is created
-    }
+    },
+    contractAbi: [{"constant":true,"inputs":[{"name":"reportId","type":"string"}],"name":"verifiersFor","outputs":[{"name":"addresses","type":"address[]"}],"type":"function"},{"constant":false,"inputs":[{"name":"reportId","type":"string"}],"name":"verify","outputs":[],"type":"function"},{"constant":true,"inputs":[{"name":"reportId","type":"string"}],"name":"isValid","outputs":[{"name":"isValid","type":"bool"}],"type":"function"}],
+    contractAddress: '0x1f54af3ad2b1649887c675099e364d2f63556bd1'
   };
 
   ENV['ember-simple-auth'] = {
