@@ -22,11 +22,12 @@
   <div class="form-group">
     <label for="reportOutput">Output</label>
 
-    {{input value=model.output
-            placeholder="Output"
-            required=true
-            id="reportOutput"
-            class="form-control"}}
+    {{textarea value=model.output
+               rows="3"
+               placeholder="Describe what has been achieved"
+               required=true
+               id="reportOutput"
+               class="form-control"}}
   </div>
 
   <div class="form-group">
