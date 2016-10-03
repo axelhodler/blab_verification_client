@@ -14,10 +14,17 @@
           </li>
 
           <li>
+            {{#link-to 'reports.myunpublished'}}
+              {{fa-icon "pencil-square-o"}} Personal Unpublished Reports
+            {{/link-to}}
+          </li>
+
+          <li>
             {{#link-to 'members.index'}}
               {{fa-icon "users"}} Members
             {{/link-to}}
           </li>
+
         </ul>
       {{/if}}
 
