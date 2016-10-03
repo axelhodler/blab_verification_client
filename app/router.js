@@ -17,6 +17,7 @@ Router.map(function() {
         this.route('new');
       });
     });
+    this.route('myunpublished');
   });
   this.route('members', function() {
     this.route('new');

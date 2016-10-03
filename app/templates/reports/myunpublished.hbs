@@ -1,0 +1,21 @@
+<h1>Reports</h1>
+<table class="table">
+  <thead>
+  <tr>
+    <th>Id</th>
+    <th>Submitter</th>
+  </tr>
+  </thead>
+  <tbody>
+
+  {{#each model as |report|}}
+
+    <tr>
+      <td>{{link-to report.id 'reports.show' report }}</td>
+      <td>{{ report.submitterId }}</td>
+    </tr>
+
+  {{/each}}
+
+  </tbody>
+</table>
