@@ -4,6 +4,7 @@ import ENV from 'blab-verification-client/config/environment';
 export default Ember.Controller.extend({
   applicationController: Ember.inject.controller('application'),
   tokenContents: Ember.computed.alias('applicationController.tokenData'),
+  whyDoesThisWork: Ember.computed.alias('wth'),
   canVerify: function() {
     return this.get('tokenContents').id !== +this.get('model').get('submitterId');
   }.property('tokenContents'),
@@ -15,5 +16,8 @@ export default Ember.Controller.extend({
         });
       });
     }
-  }
+  },
+  web3Present: function() {
+    return typeof web3 !== 'undefined';
+  }.property('whyDoesThisWork')
 });

@@ -10,9 +10,15 @@
 
 {{#if model.published}}
 {{else}}
-  <form {{ action "publish" on="submit" }}>
-    <button type="submit" class="btn btn-primary">Publish</button>
-  </form>
+  {{#if web3Present}}
+    <form {{ action "publish" on="submit" }}>
+      <button type="submit" class="btn btn-primary">Publish</button>
+    </form>
+  {{else}}
+    <div class="alert alert-danger" role="alert">
+      Please enable MetaMask
+    </div>
+  {{/if}}
 {{/if}}
 
 {{#if model.verifications}}
