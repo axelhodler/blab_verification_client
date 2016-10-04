@@ -1,5 +1,6 @@
 {
   "predef": [
+    "web3",
     "document",
     "window",
     "-Promise"

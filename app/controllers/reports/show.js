@@ -1,4 +1,5 @@
 import Ember from 'ember';
+import ENV from 'blab-verification-client/config/environment';
 
 export default Ember.Controller.extend({
   applicationController: Ember.inject.controller('application'),
@@ -7,10 +8,12 @@ export default Ember.Controller.extend({
     return this.get('tokenContents').id !== +this.get('model').get('submitterId');
   }.property('tokenContents'),
   actions: {
-    save() {
+    publish() {
       this.get('model').save().then(() => {
-        this.transitionToRoute('reports.index');
+        web3.eth.contract(JSON.parse(ENV.contractAbi)).at(ENV.contractAddress).verify("iShouldBeAHash",() => {
+          this.transitionToRoute('reports.index');
+        });
       });
     }
-  },
+  }
 });

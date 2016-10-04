@@ -1,6 +1,4 @@
 import Ember from 'ember';
-import ENV from 'blab-verification-client/config/environment';
-import Web3 from 'npm:web3';
 
 const { getOwner } = Ember;
 
@@ -18,8 +16,6 @@ export default Ember.Controller.extend({
 
     return tokenData;
   }),
-
-  contract:(new Web3()).eth.contract(Array.from(ENV.contractAbi)).at(ENV.contractAddress),
 
   actions: {
     invalidateSession: function() {
