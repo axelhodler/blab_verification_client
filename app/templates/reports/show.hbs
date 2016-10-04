@@ -5,7 +5,15 @@
   <li>Output: {{ model.output }}</li>
   <li>Date {{ model.createdOn }}</li>
   <li>isValid: {{ model.valid }}</li>
+  <li>published: {{ model.published }}</li>
 </ul>
+
+{{#if model.published}}
+{{else}}
+  <form {{ action "save" on="submit" }}>
+    <button type="submit" class="btn btn-primary">Publish</button>
+  </form>
+{{/if}}
 
 {{#if model.verifications}}
   <h3>Verified by</h3>

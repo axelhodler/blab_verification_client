@@ -6,5 +6,6 @@ export default DS.Model.extend({
   verifications: DS.hasMany('verification'),
   createdOn: DS.attr('date'),
   input: DS.attr('number'),
-  output: DS.attr('string')
+  output: DS.attr('string'),
+  published: DS.attr('boolean')
 });
