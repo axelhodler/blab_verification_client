@@ -36,6 +36,8 @@ module.exports = function(environment) {
   };
 
   if (environment === 'development') {
+    ENV.contractAbi = process.env.CONTRACT_ABI;
+    ENV.contractAddress = process.env.CONTRACT_ADDRESS;
     // ENV.APP.LOG_RESOLVER = true;
     // ENV.APP.LOG_ACTIVE_GENERATION = true;
     // ENV.APP.LOG_TRANSITIONS = true;

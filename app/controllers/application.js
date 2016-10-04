@@ -19,7 +19,7 @@ export default Ember.Controller.extend({
     return tokenData;
   }),
 
-  contract: (new Web3()).eth.contract(ENV.contractAbi).at(ENV.contractAddress),
+  contract:(new Web3()).eth.contract(Array.from(ENV.contractAbi)).at(ENV.contractAddress),
 
   actions: {
     invalidateSession: function() {
